@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYQHub - Question Papers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Using Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">PYQHub</h1>
+            <p class="subtitle">Previous Year Question Papers – <span class="highlight">One Place</span></p>
+        </header>
+
+        <main class="search-card">
+            <div class="form-group">
+                <label for="exam-type">Exam Type</label>
+                <select id="exam-type" name="exam-type">
+                    <option value="" disabled selected>Select Exam Type</option>
+                    <option value="mid-sem">Mid-Sem</option>
+                    <option value="end-sem">End-Sem</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="academic-year">Academic Year</label>
+                <select id="academic-year" name="academic-year">
+                    <option value="" disabled selected>Select Year</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <select id="branch" name="branch">
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="cse">CSE (Computer Science)</option>
+                    <option value="ece">ECE (Electronics & Comm)</option>
+                    <option value="ee">EE (Electrical Engg)</option>
+                    <option value="me">ME (Mechanical Engg)</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn-search">Search Papers</button>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 Karan Kumar. Student Project.</p>
+        </footer>
+    </div>
+</body>
+</html>

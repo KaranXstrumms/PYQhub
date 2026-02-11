@@ -1,0 +1,26 @@
+{
+  "name": "pyqhub",
+  "version": "1.0.0",
+  "description": "PYQHub is a beginner-friendly college project designed to share Previous Year Questions (PYQs). It allows students to access and upload question papers easily.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaranXstrumms/PYQhub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KaranXstrumms/PYQhub/issues"
+  },
+  "homepage": "https://github.com/KaranXstrumms/PYQhub#readme",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.0"
+  }
+}
