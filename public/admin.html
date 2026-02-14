@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - PYQHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Using Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">PYQHub Admin</h1>
+            <p class="subtitle">Upload New Question Papers</p>
+            <a href="index.html" class="back-link" style="margin-top: 10px; display: inline-block;">← Back to Home</a>
+        </header>
+
+        <main class="search-card">
+            <form id="admin-form">
+                <div class="form-group">
+                    <label for="subject">Subject Name</label>
+                    <input type="text" id="subject" placeholder="e.g. Signals & Systems" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="branch">Branch</label>
+                    <select id="branch" required>
+                        <option value="" disabled selected>Select Branch</option>
+                        <option value="CSE">CSE (Computer Science)</option>
+                        <option value="ECE">ECE (Electronics & Comm)</option>
+                        <option value="EE">EE (Electrical Engg)</option>
+                        <option value="ME">ME (Mechanical Engg)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="exam-type">Exam Type</label>
+                    <select id="exam-type" required>
+                        <option value="" disabled selected>Select Exam Type</option>
+                        <option value="Mid-Sem">Mid-Sem</option>
+                        <option value="End-Sem">End-Sem</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="year">Academic Year</label>
+                    <input type="number" id="year" placeholder="e.g. 2024" min="2000" max="2099" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="pdfUrl">PDF Document URL</label>
+                    <input type="url" id="pdfUrl" placeholder="https://example.com/paper.pdf" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="password">Admin Password</label>
+                    <input type="password" id="password" placeholder="Enter security password" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                </div>
+
+                <button type="submit" class="btn-search" style="margin-top: 25px;">Upload Paper</button>
+                <div id="message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+            </form>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 Karan Kumar. Admin Module.</p>
+        </footer>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
