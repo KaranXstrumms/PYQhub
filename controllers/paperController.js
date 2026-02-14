@@ -7,7 +7,7 @@ exports.getAllPapers = async (req, res) => {
 
     if (req.query.branch) filter.branch = req.query.branch;
     if (req.query.examType) filter.examType = req.query.examType;
-    if (req.query.year) filter.year = req.query.year;
+    if (req.query.year) filter.year = Number(req.query.year);
 
     const papers = await Paper.find(filter);
     res.json(papers);
