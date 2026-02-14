@@ -22,12 +22,12 @@
             <form id="admin-form">
                 <div class="form-group">
                     <label for="subject">Subject Name</label>
-                    <input type="text" id="subject" placeholder="e.g. Signals & Systems" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <input type="text" id="subject" name="subject" placeholder="e.g. Signals & Systems" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
                 </div>
 
                 <div class="form-group" style="margin-top: 15px;">
                     <label for="branch">Branch</label>
-                    <select id="branch" required>
+                    <select id="branch" name="branch" required>
                         <option value="" disabled selected>Select Branch</option>
                         <option value="CSE">CSE (Computer Science)</option>
                         <option value="ECE">ECE (Electronics & Comm)</option>
@@ -38,7 +38,7 @@
 
                 <div class="form-group" style="margin-top: 15px;">
                     <label for="exam-type">Exam Type</label>
-                    <select id="exam-type" required>
+                    <select id="exam-type" name="examType" required>
                         <option value="" disabled selected>Select Exam Type</option>
                         <option value="Mid-Sem">Mid-Sem</option>
                         <option value="End-Sem">End-Sem</option>
@@ -47,12 +47,13 @@
 
                 <div class="form-group" style="margin-top: 15px;">
                     <label for="year">Academic Year</label>
-                    <input type="number" id="year" placeholder="e.g. 2024" min="2000" max="2099" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <input type="number" id="year" name="year" placeholder="e.g. 2024" min="2000" max="2099" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
                 </div>
 
                 <div class="form-group" style="margin-top: 15px;">
-                    <label for="pdfUrl">PDF Document URL</label>
-                    <input type="url" id="pdfUrl" placeholder="https://example.com/paper.pdf" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+                    <label for="pdf">Upload PDF File</label>
+                    <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+
                 </div>
 
                 <div class="form-group" style="margin-top: 15px;">
