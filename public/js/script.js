@@ -4,6 +4,7 @@ const resultsDiv = document.getElementById('results');
 const examType = document.getElementById('exam-type');
 const academicYear = document.getElementById('academic-year');
 const branch = document.getElementById('branch');
+const paperTemplate = document.getElementById('paper-template');
 
 // Handle search button click
 searchBtn.addEventListener('click', async () => {
@@ -28,25 +29,23 @@ searchBtn.addEventListener('click', async () => {
       return;
     }
 
-    // Render each paper as a card
+    // Render each paper using the template
     papers.forEach((paper) => {
-      const card = document.createElement('div');
-      card.className = 'paper-card';
+      // Clone the template content
+      const clone = paperTemplate.content.cloneNode(true);
 
-      card.innerHTML = `
-        <div class="paper-info">
-          <span class="badge ${paper.examType === 'Mid-Sem' ? 'mid-sem' : 'end-sem'}">
-            ${paper.examType}
-          </span>
-          <h3 class="subject-name">${paper.subject}</h3>
-          <div class="meta-info">
-            <span>${paper.branch}</span> • <span>${paper.year}</span>
-          </div>
-        </div>
-        <a href="${paper.pdfUrl}" target="_blank" class="btn-download">Download PDF</a>
-      `;
+      // Fill in the data
+      const badge = clone.querySelector('.badge');
+      badge.textContent = paper.examType;
+      badge.classList.add(paper.examType === 'Mid-Sem' ? 'mid-sem' : 'end-sem');
 
-      resultsDiv.appendChild(card);
+      clone.querySelector('.subject-name').textContent = paper.subject;
+      clone.querySelector('.branch').textContent = paper.branch;
+      clone.querySelector('.year').textContent = paper.year;
+      clone.querySelector('.btn-download').href = paper.pdfUrl;
+
+      // Append to results
+      resultsDiv.appendChild(clone);
     });
   } catch (error) {
     resultsDiv.innerHTML = '<p class="no-results">Something went wrong. Please try again.</p>';
